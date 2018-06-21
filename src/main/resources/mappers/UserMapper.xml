@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="edu.just.jiguo.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="edu.just.jiguo.model.User" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+  </resultMap>
+
+  <select id="getUserByNameAndPassword" resultMap="BaseResultMap" parameterType="edu.just.jiguo.model.User">
+    select * from user where username = #{username} and password = #{password}
+  </select>
+
+  <select id="getUserByName" resultMap="BaseResultMap" parameterType="edu.just.jiguo.model.User">
+    select * from user where username = #{username};
+  </select>
+
+  <insert id="addUser" parameterType="edu.just.jiguo.model.User">
+    insert into user (username, password) values (#{username}, #{password})
+  </insert>
+</mapper>
