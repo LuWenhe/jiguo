@@ -1,11 +1,10 @@
-package edu.just.jiguo.dao;
+package edu.just.jiguo.service;
 
 import edu.just.jiguo.model.BestPlay;
-import edu.just.jiguo.util.MyMapper;
 
 import java.util.List;
 
-public interface BestPlayMapper extends MyMapper<BestPlay> {
+public interface BestPlayService {
 
     public boolean addBestPlay(BestPlay bestPlay);
     public BestPlay getBestPlayById(Integer bestplayId);

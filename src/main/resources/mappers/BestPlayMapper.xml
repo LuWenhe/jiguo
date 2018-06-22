@@ -13,4 +13,18 @@
     <result column="likes" property="likes" jdbcType="INTEGER" />
     <result column="assess" property="assess" jdbcType="INTEGER" />
   </resultMap>
+
+  <select id="getAllBestPlays" resultMap="BaseResultMap">
+    select * from bestplay
+  </select>
+
+  <insert id="addBestPlay" parameterType="BestGuid">
+    insert into bestplay(pic,name,description,price,likes,assess)
+    values(#{pic},#{name},#{description},#{price},#{likes},#{assess})
+  </insert>
+
+  <select id="getBestPlayById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from bestplay where bestplay_id=#{_parameter}
+  </select>
+
 </mapper>
