@@ -14,4 +14,17 @@
     <result column="apply" property="apply" jdbcType="VARCHAR" />
     <result column="last" property="last" jdbcType="VARCHAR" />
   </resultMap>
+
+  <select id="getAllHotTiYans" resultMap="BaseResultMap">
+    select * from hottiyan
+  </select>
+
+  <insert id="addHotTiYan" parameterType="HotTiYan">
+    insert into hottiyan(type,pic,description,price,count,apply,last)
+    values(#{type},#{pic},#{description},#{price},#{count},#{apply},#{last})
+  </insert>
+
+  <select id="getHotTiYanById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from hottiyan where hottiyan=#{_parameter}
+  </select>
 </mapper>

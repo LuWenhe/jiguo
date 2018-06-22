@@ -1,12 +1,10 @@
-package edu.just.jiguo.dao;
+package edu.just.jiguo.service;
 
 import edu.just.jiguo.model.HotTiYan;
-import edu.just.jiguo.util.MyMapper;
 
 import java.util.List;
 
-public interface HotTiYanMapper extends MyMapper<HotTiYan> {
-
+public interface HotTiYanService {
     public boolean addHotTiYan(HotTiYan hotTiYan);
     public HotTiYan getHotTiYanById(Integer hotTiYanId);
     public List<HotTiYan> getAllHotTiYans();
