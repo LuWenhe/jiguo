@@ -14,17 +14,4 @@
     <result column="ass" jdbcType="INTEGER" property="ass" />
     <result column="more" jdbcType="VARCHAR" property="more" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="edu.just.jiguo.model.Report">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="report_id" jdbcType="INTEGER" property="reportId" />
-    <result column="des" jdbcType="VARCHAR" property="des" />
-    <result column="customer" jdbcType="VARCHAR" property="customer" />
-    <result column="pic" jdbcType="VARCHAR" property="pic" />
-    <result column="date" jdbcType="DATE" property="date" />
-    <result column="likes" jdbcType="INTEGER" property="likes" />
-    <result column="ass" jdbcType="INTEGER" property="ass" />
-    <result column="more" jdbcType="VARCHAR" property="more" />
-  </resultMap>
 </mapper>
