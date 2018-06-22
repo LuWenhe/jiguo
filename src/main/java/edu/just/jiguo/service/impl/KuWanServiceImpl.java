@@ -26,4 +26,18 @@ public class KuWanServiceImpl implements KuWanService {
         return kuWan;
     }
 
+    @Override
+    public boolean deleteKuwanById(Integer kuwan_Id) {
+        boolean result = false;
+        List<KuWan> kuWans = getKuwanById(kuwan_Id);
+
+        if (kuWans.size() < 0){
+            return result;
+        }
+
+        kuWanMapper.deleteKuwanById(kuwan_Id);
+        result = true;
+        return result;
+    }
+
 }

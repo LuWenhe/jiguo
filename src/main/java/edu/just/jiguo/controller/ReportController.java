@@ -28,4 +28,12 @@ public class ReportController {
         return reports;
     }
 
+    @RequestMapping("/delete")
+    public String deleteReport(Integer reportId){
+        boolean flag = reportService.deleteReportById(reportId);
+        if (flag){
+            return "1";
+        }
+        return "0";
+    }
 }

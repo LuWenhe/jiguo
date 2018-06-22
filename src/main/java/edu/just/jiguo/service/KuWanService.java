@@ -10,4 +10,6 @@ public interface KuWanService {
 
     public List<KuWan> getKuwanById(Integer kuwanId);
 
+    public boolean deleteKuwanById(Integer kuwan_Id);
+
 }

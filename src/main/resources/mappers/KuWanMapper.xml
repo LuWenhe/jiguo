@@ -21,4 +21,8 @@
   <select id="getKuWanById" resultMap="BaseResultMap" parameterType="Integer">
     select * from kuwan where kuwan_id = #{_parameter}
   </select>
+
+  <delete id="deleteKuwanById" parameterType="Integer">
+    delete from kuwan where kuwan_id = #{_parameter}
+  </delete>
 </mapper>

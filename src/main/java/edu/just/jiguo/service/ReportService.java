@@ -10,4 +10,5 @@ public interface ReportService {
 
     public List<Report> getAllReportById(Integer reportId);
 
+    public boolean deleteReportById(Integer reportId);
 }

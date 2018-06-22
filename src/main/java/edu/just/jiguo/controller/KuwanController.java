@@ -24,7 +24,15 @@ public class KuwanController {
         } else {
             kuWans = kuWanService.getKuwanById(kuwanId);
         }
-
         return kuWans;
+    }
+
+    @RequestMapping("/delete")
+    public String deleteKuwan(Integer kuwan_Id){
+        boolean flag = kuWanService.deleteKuwanById(kuwan_Id);
+        if (flag){
+            return "1";
+        }
+        return "0";
     }
 }

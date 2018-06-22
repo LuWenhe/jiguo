@@ -27,5 +27,18 @@ public class ReportServiceImpl implements ReportService {
         return reports;
     }
 
+    @Override
+    public boolean deleteReportById(Integer reportId) {
+        boolean result = false;
+
+        List<Report> report = reportMapper.getAllReportById(reportId);
+        if(report.size() < 0){
+            return result;
+        }
+
+        reportMapper.deleteReportById(reportId);
+        result = true;
+        return result;
+    }
 
 }

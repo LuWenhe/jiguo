@@ -11,4 +11,5 @@ public interface KuWanMapper extends MyMapper<KuWan> {
 
     public List<KuWan> getKuWanById(Integer kuWan_Id);
 
+    public boolean deleteKuwanById(Integer kuwan_Id);
 }

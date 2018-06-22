@@ -22,4 +22,8 @@
   <select id="getAllReportById" resultMap="BaseResultMap" parameterType="Integer">
     select * from report where report_id = #{_parameter}
   </select>
+
+  <delete id="deleteReportById" parameterType="Integer">
+    delete from report where report_id = #{_parameter}
+  </delete>
 </mapper>
