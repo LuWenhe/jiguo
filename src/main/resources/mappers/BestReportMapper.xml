@@ -14,4 +14,18 @@
     <result column="assess" property="assess" jdbcType="INTEGER" />
     <result column="checkDetail" property="checkdetail" jdbcType="VARCHAR" />
   </resultMap>
+
+  <select id="getAllBestReports" resultMap="BaseResultMap">
+    select * from bestreport
+  </select>
+
+  <insert id="addBestReport" parameterType="BestGuid">
+    insert into bestreport(pic,description,customer,date,likes,assess,checkDetail)
+    values(#{pic},#{description},#{customer},#{date},#{likes},#{assess},#{checkDetail})
+  </insert>
+
+  <select id="getBestReportById" parameterType="Integer" resultMap="BaseResultMap">
+    select * from bestreport where bestreport_id=#{_parameter}
+  </select>
+
 </mapper>

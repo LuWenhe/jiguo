@@ -1,11 +1,10 @@
-package edu.just.jiguo.dao;
+package edu.just.jiguo.service;
 
 import edu.just.jiguo.model.BestReport;
-import edu.just.jiguo.util.MyMapper;
 
 import java.util.List;
 
-public interface BestReportMapper extends MyMapper<BestReport> {
+public interface BestReportService {
 
     public boolean addBestReport(BestReport bestReport);
     public BestReport getBestReportById(Integer bestReportId);
