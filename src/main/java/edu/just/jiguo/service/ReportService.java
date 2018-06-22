@@ -11,5 +11,4 @@ public interface ReportService {
     public Report getReportById(Integer reportId);
     public boolean deleteReport(Integer reportId);
     public boolean updateReport(Report report);
-
 }

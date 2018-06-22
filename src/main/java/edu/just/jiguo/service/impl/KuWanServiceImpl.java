@@ -39,4 +39,5 @@ public class KuWanServiceImpl implements KuWanService {
     public boolean updateKuWan(KuWan kuWan) {
         return kuWanMapper.updateKuWan(kuWan);
     }
+
 }

@@ -39,4 +39,5 @@ public class ReportServiceImpl implements ReportService {
     public boolean updateReport(Report report) {
         return reportMapper.updateReport(report);
     }
+
 }
