@@ -18,4 +18,5 @@
     select * from administor where username = #{_parameter};
   </select>
 
+
 </mapper>

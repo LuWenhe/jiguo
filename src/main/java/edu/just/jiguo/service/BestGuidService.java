@@ -10,4 +10,5 @@ public interface BestGuidService {
     public List<BestGuid> getAllBestGuids();
     public boolean deleteBestGuid(Integer bestguidId);
     public boolean updateBestGuid(BestGuid bestGuid);
+    public BestGuid searchGuidByName(String name);
 }

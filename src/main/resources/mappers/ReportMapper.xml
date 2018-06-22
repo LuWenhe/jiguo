@@ -15,7 +15,7 @@
     <result column="more" jdbcType="VARCHAR" property="more" />
   </resultMap>
 
-  <select id="getAllReport" parameterType="edu.just.jiguo.model.Report" resultMap="BaseResultMap">
+  <select id="getAllReports" parameterType="edu.just.jiguo.model.Report" resultMap="BaseResultMap">
     select * from report
   </select>
 
@@ -24,7 +24,7 @@
     values(#{des},#{customer},#{pic},#{date},#{likes},#{ass},#{more})
   </insert>
 
-  <select id="getAllReportById" resultMap="BaseResultMap" parameterType="Integer">
+  <select id="getReportById" resultMap="BaseResultMap" parameterType="Integer">
     select * from report where report_id = #{_parameter}
   </select>
 

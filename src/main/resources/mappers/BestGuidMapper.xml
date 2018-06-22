@@ -33,4 +33,8 @@
         update bestguid set pic=#{pic},description=#{description},likes=#{likes},assess=#{assess}
     </update>
 
+    <select id="searchGuidByName" parameterType="String" resultMap="BaseResultMap">
+        select * from bestguid where description like #{_parameter}
+    </select>
+
 </mapper>

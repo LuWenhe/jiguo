@@ -38,4 +38,9 @@ public class BestGuidServiceImpl implements BestGuidService {
     public boolean updateBestGuid(BestGuid bestGuid) {
         return bestGuidMapper.updateBestGuid(bestGuid);
     }
+
+    @Override
+    public BestGuid searchGuidByName(String name) {
+        return bestGuidMapper.searchGuidByName(name);
+    }
 }

@@ -55,4 +55,9 @@ public class BestGuidController {
         }
     }
 
+    @RequestMapping("/search")
+    public BestGuid searchGuidByName(String name){
+        return bestGuidService.searchGuidByName(name);
+    }
+
 }
