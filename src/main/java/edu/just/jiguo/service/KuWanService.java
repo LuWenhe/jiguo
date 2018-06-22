@@ -6,8 +6,10 @@ import java.util.List;
 
 public interface KuWanService {
 
-    public List<KuWan> getAllKuwan();
-
-    public List<KuWan> getKuwanById(Integer kuwanId);
+    public boolean addKuWan(KuWan kuWan);
+    public List<KuWan> getAllKuWans();
+    public KuWan getKuWanById(Integer kuWanId);
+    public boolean deleteKuWan(Integer kuWanId);
+    public boolean updateKuWan(KuWan kuWan);
 
 }

@@ -36,4 +36,24 @@ public class BestPlayController {
     public BestPlay getById(Integer bestplayId){
         return bestPlayService.getBestPlayById(bestplayId);
     }
+
+    @RequestMapping("/delete")
+    public String deleteBestGuid(Integer bestplayId){
+        boolean flag = bestPlayService.deleteBestPlay(bestplayId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(BestPlay bestPlay){
+        boolean flag = bestPlayService.updateBestPlay(bestPlay);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
 }

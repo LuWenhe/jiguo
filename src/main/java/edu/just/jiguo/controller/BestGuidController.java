@@ -20,7 +20,7 @@ public class BestGuidController {
         return bestGuidService.getAllBestGuids();
     }
 
-    @RequestMapping("/addBestGuid")
+    @RequestMapping("/add")
     public String addBestGuid(BestGuid bestGuid){
         boolean flag = bestGuidService.addBestGuid(bestGuid);
         if(flag){
@@ -33,6 +33,26 @@ public class BestGuidController {
     @RequestMapping("/getById")
     public BestGuid getById(Integer bestguidId){
         return bestGuidService.getBestGuidById(bestguidId);
+    }
+
+    @RequestMapping("/delete")
+    public String deleteBestGuid(Integer bestGuidId){
+        boolean flag = bestGuidService.deleteBestGuid(bestGuidId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(BestGuid bestGuid){
+        boolean flag = bestGuidService.updateBestGuid(bestGuid);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
     }
 
 }

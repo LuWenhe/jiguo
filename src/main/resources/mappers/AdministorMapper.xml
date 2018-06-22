@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.just.jiguo.dao.AdministorMapper">
+  <resultMap id="BaseResultMap" type="edu.just.jiguo.model.Administor">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+  </resultMap>
+
+  <select id="getUserByNameAndPassword" parameterType="edu.just.jiguo.model.Administor" resultMap="BaseResultMap">
+    select * from administor where username = #{username} and password = #{password}
+  </select>
+
+  <select id="getUserByName" parameterType="String" resultMap="BaseResultMap">
+    select * from administor where username = #{_parameter};
+  </select>
+
+</mapper>

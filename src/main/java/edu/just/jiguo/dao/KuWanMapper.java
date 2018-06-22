@@ -7,8 +7,10 @@ import java.util.List;
 
 public interface KuWanMapper extends MyMapper<KuWan> {
 
-    public List<KuWan> getKuWan();
-
-    public List<KuWan> getKuWanById(Integer kuWan_Id);
+    public boolean addKuWan(KuWan kuWan);
+    public List<KuWan> getAllKuWans();
+    public KuWan getKuWanById(Integer kuWanId);
+    public boolean deleteKuWan(Integer kuWanId);
+    public boolean updateKuWan(KuWan kuWan);
 
 }

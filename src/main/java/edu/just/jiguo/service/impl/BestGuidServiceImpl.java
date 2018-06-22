@@ -36,6 +36,6 @@ public class BestGuidServiceImpl implements BestGuidService {
 
     @Override
     public boolean updateBestGuid(BestGuid bestGuid) {
-        return updateBestGuid(bestGuid);
+        return bestGuidMapper.updateBestGuid(bestGuid);
     }
 }

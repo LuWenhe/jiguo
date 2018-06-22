@@ -19,7 +19,21 @@
     select * from report
   </select>
 
+  <insert id="addReport" parameterType="Report">
+    insert into report(des,customer,pic,date,likes,ass,more)
+    values(#{des},#{customer},#{pic},#{date},#{likes},#{ass},#{more})
+  </insert>
+
   <select id="getAllReportById" resultMap="BaseResultMap" parameterType="Integer">
     select * from report where report_id = #{_parameter}
   </select>
+
+  <delete id="deleteReport" parameterType="Integer">
+    DELETE from report where kuwan_id=#{_parameter}
+  </delete>
+
+  <update id="updateReport" parameterType="Report">
+    update report set des=#{des},customer=#{customer},pic=#{pic},date=#{date},likes=#{likes},ass=#{ass},more=#{more}
+  </update>
+
 </mapper>

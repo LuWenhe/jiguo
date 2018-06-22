@@ -14,18 +14,29 @@ public class ReportServiceImpl implements ReportService {
     @Autowired
     private ReportMapper reportMapper;
 
+
     @Override
-    public List<Report> getAllReport() {
-        List<Report> reports = reportMapper.getAllReport();
-        return reports;
+    public boolean addReport(Report report) {
+        return reportMapper.addReport(report);
     }
 
     @Override
-    public List<Report> getAllReportById(Integer reportId) {
-        List<Report> reports = reportMapper.getAllReportById(reportId);
-        System.out.println(reports);
-        return reports;
+    public List<Report> getAllReports() {
+        return reportMapper.getAllReports();
     }
 
+    @Override
+    public Report getReportById(Integer reportId) {
+        return reportMapper.getReportById(reportId);
+    }
 
+    @Override
+    public boolean deleteReport(Integer reportId) {
+        return reportMapper.deleteReport(reportId);
+    }
+
+    @Override
+    public boolean updateReport(Report report) {
+        return reportMapper.updateReport(report);
+    }
 }

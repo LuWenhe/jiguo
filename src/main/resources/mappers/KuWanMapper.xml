@@ -14,11 +14,25 @@
     <result column="assess" property="assess" jdbcType="VARCHAR" />
   </resultMap>
 
-  <select id="getKuWan" parameterType="edu.just.jiguo.model.KuWan" resultMap="BaseResultMap">
+  <select id="getAllKuWans" parameterType="edu.just.jiguo.model.KuWan" resultMap="BaseResultMap">
     select * from kuwan
   </select>
+
+  <insert id="addKuWan" parameterType="KuWan">
+    insert into kuwan(pic,name,description,price,likes,assess)
+    values(#{pic},#{name},#{description},#{price},#{likes},#{assess})
+  </insert>
 
   <select id="getKuWanById" resultMap="BaseResultMap" parameterType="Integer">
     select * from kuwan where kuwan_id = #{_parameter}
   </select>
+
+  <delete id="deleteKuWan" parameterType="Integer">
+    DELETE from kuwan where kuwan_id=#{_parameter}
+  </delete>
+
+  <update id="updateKuWan" parameterType="BestPlay">
+    update kuwan set pic=#{pic},name=#{name},description=#{description},price=#{price},likes=#{likes},assess=#{assess}
+  </update>
+
 </mapper>

@@ -17,12 +17,20 @@
     </select>
 
     <insert id="addBestGuid" parameterType="BestGuid">
-        insert into bestGuid(pic,description,likes,assess)
+        insert into bestguid(pic,description,likes,assess)
         values(#{pic},#{description},#{likes},#{assess})
     </insert>
 
     <select id="getBestGuidById" parameterType="Integer" resultMap="BaseResultMap">
         select * from bestguid where bestguid_id=#{_parameter}
     </select>
+
+    <delete id="deleteBestGuid" parameterType="Integer">
+        DELETE from bestguid where bestguid_id=#{_parameter}
+    </delete>
+
+    <update id="updateBestGuid" parameterType="BestGuid">
+        update bestguid set pic=#{pic},description=#{description},likes=#{likes},assess=#{assess}
+    </update>
 
 </mapper>

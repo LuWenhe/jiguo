@@ -37,4 +37,24 @@ public class HotTiYanController {
         return hotTiYanService.getHotTiYanById(hotTiYanId);
     }
 
+    @RequestMapping("/delete")
+    public String deleteHotTiYan(Integer hotTiYanId){
+        boolean flag = hotTiYanService.deleteHotTiYan(hotTiYanId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(HotTiYan hotTiYan){
+        boolean flag = hotTiYanService.updateHotTiYan(hotTiYan);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
 }

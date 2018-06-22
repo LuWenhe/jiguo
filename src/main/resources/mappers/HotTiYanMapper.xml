@@ -27,4 +27,12 @@
   <select id="getHotTiYanById" parameterType="Integer" resultMap="BaseResultMap">
     select * from hottiyan where hottiyan=#{_parameter}
   </select>
+
+  <delete id="deleteHotTiYan" parameterType="Integer">
+    DELETE from hottiyan where hottiyan=#{_parameter}
+  </delete>
+
+  <update id="updateHotTiYan" parameterType="BestPlay">
+    update hottiyan set type=#{type},pic=#{pic},description=#{description},price=#{price},count=#{count},apply=#{apply},last=#{last}
+  </update>
 </mapper>

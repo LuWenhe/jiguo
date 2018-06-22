@@ -28,4 +28,12 @@
     select * from bestreport where bestreport_id=#{_parameter}
   </select>
 
+  <delete id="deleteBestReport" parameterType="Integer">
+    DELETE from bestreport where bestreport_id=#{_parameter}
+  </delete>
+
+  <update id="updateBestReport" parameterType="BestPlay">
+    update bestreport set pic=#{pic},description=#{description},customer=#{customer},date=#{date},likes=#{likes},assess=#{assess},checkDetail=#{checkDetail}
+  </update>
+
 </mapper>

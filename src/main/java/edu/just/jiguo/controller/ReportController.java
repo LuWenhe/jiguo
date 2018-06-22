@@ -15,17 +15,44 @@ public class ReportController {
     @Autowired
     private ReportService reportService;
 
-    @RequestMapping("/getall")
-    public List<Report> getReport(Integer reportId){
-        List<Report> reports;
+    @RequestMapping("/getAll")
+    public List<Report> getAllKuWans(){
+        return reportService.getAllReports();
+    }
 
-        if (reportId == null){
-            reports = reportService.getAllReport();
-        } else {
-            reports = reportService.getAllReportById(reportId);
+    @RequestMapping("/addKuWan")
+    public String addHotTiYan(Report report){
+        boolean flag = reportService.addReport(report);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
         }
+    }
 
-        return reports;
+    @RequestMapping("/getById")
+    public Report getById(Integer reportId){
+        return reportService.getReportById(reportId);
+    }
+
+    @RequestMapping("/delete")
+    public String deleteHotTiYan(Integer reportId){
+        boolean flag = reportService.deleteReport(reportId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(Report report){
+        boolean flag = reportService.updateReport(report);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
     }
 
 }

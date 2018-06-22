@@ -34,4 +34,24 @@ public class BestReportController {
     public BestReport getById(Integer bestReportId){
         return bestReportService.getBestReportById(bestReportId);
     }
+
+    @RequestMapping("/delete")
+    public String deleteBestGuid(Integer bestReportId){
+        boolean flag = bestReportService.deleteBestReport(bestReportId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(BestReport bestReport){
+        boolean flag = bestReportService.updateBestReport(bestReport);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
 }

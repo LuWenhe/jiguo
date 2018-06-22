@@ -15,7 +15,7 @@
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.lanou.util.MyMapper"/>
+            <property name="mappers" value="edu.just.jiguo.util.MyMapper"/>
         </plugin>
 
         <!-- optional，旨在创建class时，对注释进行控制 -->
@@ -27,9 +27,9 @@
         <!--jdbc的数据库连接 -->
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
-                connectionURL="jdbc:mysql://localhost:3306/jiguo1?characterEncoding=utf-8"
+                connectionURL="jdbc:mysql://localhost:3306/jiguo?characterEncoding=utf-8"
                 userId="root"
-                password="lwh011305">
+                password="root">
         </jdbcConnection>
 
 
@@ -74,13 +74,7 @@
             <property name="enableSubPackages" value="false" />
         </javaClientGenerator>
 
-        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="report" domainObjectName="Report" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="bestguid" domainObjectName="BestGuid" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="bestplay" domainObjectName="BestPlay" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="bestreport" domainObjectName="BestReport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="hottiyan" domainObjectName="HotTiYan" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
-        <table tableName="kuwan" domainObjectName="KuWan" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="administor" domainObjectName="Administor" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
         <!-- geelynote mybatis插件的搭建 -->
     </context>

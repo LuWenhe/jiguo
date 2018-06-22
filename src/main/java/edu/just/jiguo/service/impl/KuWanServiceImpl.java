@@ -14,16 +14,29 @@ public class KuWanServiceImpl implements KuWanService {
     @Autowired
     private KuWanMapper kuWanMapper;
 
+
     @Override
-    public List<KuWan> getAllKuwan() {
-        List<KuWan> kuWans = kuWanMapper.getKuWan();
-        return kuWans;
+    public boolean addKuWan(KuWan kuWan) {
+        return kuWanMapper.addKuWan(kuWan);
     }
 
     @Override
-    public List<KuWan> getKuwanById(Integer kuwanId) {
-        List<KuWan> kuWan = kuWanMapper.getKuWanById(kuwanId);
-        return kuWan;
+    public List<KuWan> getAllKuWans() {
+        return kuWanMapper.getAllKuWans();
     }
 
+    @Override
+    public KuWan getKuWanById(Integer kuWanId) {
+        return kuWanMapper.getKuWanById(kuWanId);
+    }
+
+    @Override
+    public boolean deleteKuWan(Integer kuWanId) {
+        return kuWanMapper.deleteKuWan(kuWanId);
+    }
+
+    @Override
+    public boolean updateKuWan(KuWan kuWan) {
+        return kuWanMapper.updateKuWan(kuWan);
+    }
 }

@@ -15,16 +15,43 @@ public class KuwanController {
     @Autowired
     private KuWanService kuWanService;
 
-    @RequestMapping("/getall")
-    public List<KuWan> getKuwan(Integer kuwanId){
-        List<KuWan> kuWans;
+    @RequestMapping("/getAll")
+    public List<KuWan> getAllKuWans(){
+        return kuWanService.getAllKuWans();
+    }
 
-        if (kuwanId== null){
-            kuWans = kuWanService.getAllKuwan();
-        } else {
-            kuWans = kuWanService.getKuwanById(kuwanId);
+    @RequestMapping("/addKuWan")
+    public String addHotTiYan(KuWan kuWan){
+        boolean flag = kuWanService.addKuWan(kuWan);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
         }
+    }
 
-        return kuWans;
+    @RequestMapping("/getById")
+    public KuWan getById(Integer kuwanId){
+        return kuWanService.getKuWanById(kuwanId);
+    }
+
+    @RequestMapping("/delete")
+    public String deleteHotTiYan(Integer kuwanId){
+        boolean flag = kuWanService.deleteKuWan(kuwanId);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
+    }
+
+    @RequestMapping("/update")
+    public String updateBestGuid(KuWan kuWan){
+        boolean flag = kuWanService.updateKuWan(kuWan);
+        if(flag){
+            return "1";
+        }else{
+            return "0";
+        }
     }
 }
