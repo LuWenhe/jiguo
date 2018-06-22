@@ -14,4 +14,12 @@
     <result column="ass" jdbcType="INTEGER" property="ass" />
     <result column="more" jdbcType="VARCHAR" property="more" />
   </resultMap>
+
+  <select id="getAllReport" parameterType="edu.just.jiguo.model.Report" resultMap="BaseResultMap">
+    select * from report
+  </select>
+
+  <select id="getAllReportById" resultMap="BaseResultMap" parameterType="Integer">
+    select * from report where report_id = #{_parameter}
+  </select>
 </mapper>

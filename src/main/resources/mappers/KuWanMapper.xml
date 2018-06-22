@@ -13,4 +13,12 @@
     <result column="likes" property="likes" jdbcType="VARCHAR" />
     <result column="assess" property="assess" jdbcType="VARCHAR" />
   </resultMap>
+
+  <select id="getKuWan" parameterType="edu.just.jiguo.model.KuWan" resultMap="BaseResultMap">
+    select * from kuwan
+  </select>
+
+  <select id="getKuWanById" resultMap="BaseResultMap" parameterType="Integer">
+    select * from kuwan where kuwan_id = #{_parameter}
+  </select>
 </mapper>
