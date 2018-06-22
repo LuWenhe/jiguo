@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.just.jiguo.dao.ReportMapper">
+  <resultMap id="BaseResultMap" type="edu.just.jiguo.model.Report">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="report_id" jdbcType="INTEGER" property="reportId" />
+    <result column="des" jdbcType="VARCHAR" property="des" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="ass" jdbcType="INTEGER" property="ass" />
+    <result column="more" jdbcType="VARCHAR" property="more" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="edu.just.jiguo.model.Report">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="report_id" jdbcType="INTEGER" property="reportId" />
+    <result column="des" jdbcType="VARCHAR" property="des" />
+    <result column="customer" jdbcType="VARCHAR" property="customer" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="likes" jdbcType="INTEGER" property="likes" />
+    <result column="ass" jdbcType="INTEGER" property="ass" />
+    <result column="more" jdbcType="VARCHAR" property="more" />
+  </resultMap>
+</mapper>

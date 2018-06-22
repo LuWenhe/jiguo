@@ -2,7 +2,6 @@ package edu.just.jiguo.model;
 
 import javax.persistence.*;
 
-@Table(name = "user")
 public class User {
     @Id
     @Column(name = "user_id")
